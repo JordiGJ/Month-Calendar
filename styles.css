@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: cursive;
+  color: #dfff;
+}
+section {
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.info {
+  background-color: #c75701;
+  text-align: center;
+  padding: 1rem;
+}
+h4 {
+  text-transform: uppercase;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+p {
+  /* border: solid blue 1px; */
+  height: 25px;
+}
+.icon-container {
+  position: relative;
+  height: 0;
+}
+.fa-chevron-left {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  cursor: pointer;
+}
+.fa-chevron-right {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+  cursor: pointer;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0.2rem;
+}
+.calendarDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0.2rem;
+}
+.dayName {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.day {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.active {
+  transition: border 0.3s ease-in, transform 0.3s ease-in;
+}
+.active:hover {
+  border: solid grey 2px;
+  transform: scale(1.05);
+}
+.current {
+  border-radius: 4px;
+  background-color: #c75701;
+}
+.finde {
+  color: #c75701;
+}
+
+@media (width <= 360px) {
+  .dayName {
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+  .day {
+    height: 40px;
+    font-size: 0.8rem;
+  }
+}
